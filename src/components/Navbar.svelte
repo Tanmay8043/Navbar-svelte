@@ -16,8 +16,8 @@
 </script>
 
 <div class="bg-gray-800 relative text-gray-700 min-h-screen min-w-screen flex items-center justify-center">
-  <div class="navigation flex justify-center items-center bg-gray-50 px-12 pt-5  rounded-xl h-16 fixed bottom-6">
-    <ul class="flex flex-row items-center justify-center gap-12 relative">
+  <div class="navigation flex justify-center items-center bg-gray-50 px-12 pt-5 sm:rounded-xl h-16 fixed bottom-6 w-full sm:w-auto">
+    <ul class="flex flex-row items-center justify-center gap-6 sm:gap-12 relative">
       <li class="list relative z-10 active" on:click={activeLink} on:click={()=>{selectedStore.set("Home")}}>
         <a 
           class="flex flex-col items-center relative justify-center ease-in-out duration-600 group focus:outline-none "
@@ -124,6 +124,19 @@
     transform: translateX(calc(120px * 0));
   }
   .navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(95px * 1));
+  }
+  .navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(93px * 2));
+  } 
+  .navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(94px * 3));
+  } 
+  @media (min-width: 640px) { 
+    .navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(120px * 0));
+  }
+  .navigation ul li:nth-child(2).active ~ .indicator{
     transform: translateX(calc(117px * 1));
   }
   .navigation ul li:nth-child(3).active ~ .indicator{
@@ -132,4 +145,7 @@
   .navigation ul li:nth-child(4).active ~ .indicator{
     transform: translateX(calc(118px * 3));
   } 
+   }
+  
+  
 </style>
