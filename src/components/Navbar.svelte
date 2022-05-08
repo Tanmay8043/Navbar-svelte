@@ -36,7 +36,7 @@
 </script>
 
 <div class="bg-gray-800 text-gray-700 min-h-screen min-w-screen flex items-center justify-center">
-  <div class="navigation bg-gray-50 pl-12 py-5 rounded-xl h-20">
+  <div class="navigation bg-gray-50 pl-12 py-5 rounded-xl h-20 fixed bottom-5">
     <ul class="flex flex-row items-center justify-center gap-12 relative">
       <li class="active" on:click={()=>{selectedStore.set("Home")}}>
         <a 
